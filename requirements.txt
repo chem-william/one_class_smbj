@@ -1,5 +1,4 @@
 matplotlib==3.7.1
-matplotlib-inline==0.1.6
 numpy==1.23.5
 pyod==1.0.9
 scikit-learn==1.2.2
