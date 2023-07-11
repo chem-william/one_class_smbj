@@ -118,23 +118,18 @@ def generate_2dhistograms(traces: np.ndarray, bins_2d: int, hist2d_length: int, 
 def summary_statistics(traces: np.ndarray) -> np.ndarray:
     features = []
     for t in tqdm(traces):
-        length = len(t)
         mean = np.mean(t)
         median = np.median(t)
         std = np.std(t)
 
         x = np.arange(len(t))
         m1 = np.polyfit(x, t, deg=1)
-
-        # m2 = np.polyfit(x, t, deg=2)
         
         features.append([
-            # length,
             mean,
             median,
             std,
             m1[1],
-            # *m1,
         ])
     return np.array(features)
 
